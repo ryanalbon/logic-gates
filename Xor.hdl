@@ -1,0 +1,11 @@
+CHIP Xor {
+    IN a, b;
+    OUT out;
+    PARTS:
+    Nand(a=a, b=b, out=c);
+    Nand(a=a, b=a, out=p);
+    Nand(a=b, b=b, out=q);
+    Nand(a=p, b=q, out=r);
+    Nand(a=c, b=r, out=s);
+    Nand(a=s, b=s, out=out);
+}
