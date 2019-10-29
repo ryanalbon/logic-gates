@@ -1,0 +1,7 @@
+CHIP And2Bit {
+    IN a0, a1, b0, b1;
+    OUT out0, out1;
+    PARTS:
+    And(a=a0, b=b0, out=out0);
+    And(a=a1, b=b1, out=out1);
+}
